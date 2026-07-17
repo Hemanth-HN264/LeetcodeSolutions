@@ -1,0 +1,17 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int i,j;
+        for( i=0;i<=nums.length-2;i++){
+            for( j=i+1;j<=nums.length-1;j++){
+                if(nums[i]+nums[j]==target){
+                    return new int [] {i,j};
+                }
+            }
+        }
+        return new int [] {};
+    }
+}
+
+// Synced seamlessly with LeetHub Pro
+// Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+// Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
