@@ -1,18 +1,10 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        HashMap <Integer, Integer> h=new HashMap<>();
+        int ans=0;
         for(Integer i:nums){
-            int x=h.getOrDefault(i,0);
-            x++;
-            h.put(i,x);
+            ans=ans^i;
         }
-
-        for(Integer i:h.keySet()){
-            if(h.get(i)==1){
-                return i;
-            }
-        }
-        return 0;
+        return ans;
     }
 }
 
