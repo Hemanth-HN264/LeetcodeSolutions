@@ -3,6 +3,7 @@ class Solution {
         int diff=0;
         int maxx=0;
         for(int i=0;i<nums.length;i++){
+            diff=0;
             for(int j=i+1;j<nums.length;j++){
                 if(nums[i]<nums[j]){
                     diff=nums[j]-nums[i];
