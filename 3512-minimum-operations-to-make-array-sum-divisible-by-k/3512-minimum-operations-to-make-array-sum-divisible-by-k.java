@@ -4,12 +4,7 @@ class Solution {
         for(Integer i:nums){
             sum=sum+i;
         }
-        int count=0;
-        while(sum%k!=0){
-            sum--;
-            count++;
-        }
-        return count;
+        return sum % k;
     }
 }
 
