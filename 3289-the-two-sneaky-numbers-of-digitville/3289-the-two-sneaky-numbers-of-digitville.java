@@ -6,18 +6,14 @@ class Solution {
             x++;
             h.put(i,x);
         }
-        ArrayList<Integer> l=new ArrayList<>();
+
+        int[] res=new int[2];
+        int r=0;
         for(Integer i:h.keySet()){
             if(h.get(i)>1){
-                l.add(i);
+                res[r]=i;
+                r++;
             }
-        }
-
-        int[] res=new int[l.size()];
-        int r=0;
-        for(Integer i:l){
-            res[r]=i;
-            r++;
         }
         return res;
     }
