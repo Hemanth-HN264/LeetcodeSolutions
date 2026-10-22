@@ -1,26 +1,22 @@
 class Solution {
     public int getLeastFrequentDigit(int n) {
-        HashMap<Integer,Integer>h=new HashMap<>();
-        int x;
+        int[] freq=new int[10];
         while(n!=0){
             int rem=n%10;
-            x=h.getOrDefault(rem,0);
-            x++;
-            h.put(rem,x);
+            freq[rem]+=1;
             n=n/10;
         }
-        
-        int minFreq = Integer.MAX_VALUE;
-        int small = Integer.MAX_VALUE;
-
-        for (Integer i : h.keySet()) {
-            int freq = h.get(i);
-            if (freq < minFreq || (freq == minFreq && i < small)) {
-                minFreq = freq;
-                small = i;
+        int res=-1;
+        int min=Integer.MAX_VALUE;
+        for(int i=0;i<freq.length;i++){
+            if(freq[i]>0){
+                if(freq[i]<min){
+                res=i;
+                min=freq[i];
+                }   
             }
         }
-        return small;
+        return res;
     }
 }
 
