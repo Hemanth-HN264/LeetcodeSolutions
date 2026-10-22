@@ -4,8 +4,8 @@ class Solution {
         int count=0;
         HashMap<Integer,Integer> h=new HashMap<>();
         h.put(0,1);
-        for(int i=0;i<nums.length;i++){
-            psum+=nums[i];
+        for(Integer i:nums){
+            psum+=i;
             if(h.containsKey(psum-k)){
                 count+=h.get(psum-k);
             }
