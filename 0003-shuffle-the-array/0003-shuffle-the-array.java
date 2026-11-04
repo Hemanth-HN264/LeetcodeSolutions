@@ -1,12 +1,12 @@
 class Solution {
-    public int[] getConcatenation(int[] nums) {
-        int n=nums.length;
-        int[] arr=new int[n*2];
-        for(int i=0;i<nums.length;i++){
-            arr[i]=nums[i];
-            arr[n+i]=nums[i];
+    public int[] shuffle(int[] nums, int n) {
+        int[] ans = new int[2 * n];
+        int j = 0;
+        for (int i = 0; i < n; i++) {
+            ans[j++] = nums[i];
+            ans[j++] = nums[i + n];
         }
-        return arr;
+        return ans;
     }
 }
 
