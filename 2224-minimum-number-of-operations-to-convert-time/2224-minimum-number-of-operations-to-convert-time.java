@@ -23,11 +23,7 @@ class Solution {
             dif-=5;
             count++;
         }
-        while(dif>=1){
-            dif-=1;
-            count++;
-        }
-
+        count+=dif;
         return count;
     }
 }
