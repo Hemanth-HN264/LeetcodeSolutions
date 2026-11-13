@@ -14,9 +14,10 @@ class Solution {
                 int len=i-h.get(rem);
                 maxLen=Math.max(maxLen,len);
             }
-            if(!h.containsKey(sum)){
+           /* if(!h.containsKey(sum)){
                 h.put(sum,i);
-            }
+            } */
+            h.putIfAbsent(sum,i);
             
         }
         return maxLen;
