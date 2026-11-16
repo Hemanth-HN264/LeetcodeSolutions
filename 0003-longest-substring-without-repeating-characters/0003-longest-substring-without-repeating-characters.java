@@ -6,7 +6,10 @@ class Solution {
         for(int i=0;i<n;i++){
             HashSet<Character> h=new HashSet<>();
             for(int j=i;j<n;j++){
-                if(h.contains(ch[j])) break;
+                if(h.contains(ch[j])){
+                    h.clear();
+                    break;
+                }
                 int len=j-i+1;
                 maxLen=Math.max(len,maxLen);
                 h.add(ch[j]);
