@@ -8,7 +8,10 @@ class Solution {
                 a[i]=(char)(a[i]+' ');
                 ans.append(a[i]);
             }
-            else if((a[i]>=97 && a[i]<=122) || (a[i]>=48 && a[i]<=57)){
+            else if((a[i]>=97 && a[i]<=122)){
+                ans.append(a[i]);
+            }
+            else if(a[i]>=48 && a[i]<=57){
                 ans.append(a[i]);
             }
         }
